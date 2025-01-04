@@ -2,4 +2,5 @@
 set -e
 
 # Stop the running container (if any)
-echo "Hi"
+var='docker ps | awk -F" " '{Print$1}''
+docker rm -f $var
